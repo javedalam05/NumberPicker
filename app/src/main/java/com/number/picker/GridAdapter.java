@@ -73,6 +73,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
                 holder.rl_click.setBackgroundResource(R.drawable.circle_shape_light_gray);
                 holder.myTextView.setTextColor(Color.parseColor("#9c9797"));
             }
+            holder.rl_click.setTag(position);
             holder.rl_click.setVisibility(View.VISIBLE);
         } else {
             holder.rl_click.setVisibility(View.INVISIBLE);
@@ -89,7 +90,8 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
 
     // stores and recycles views as they are scrolled off screen
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        //            implements View.OnClickListener {
         TextView myTextView;
         RelativeLayout rl_click;
 
@@ -97,19 +99,20 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
             super(itemView);
             myTextView = (TextView) itemView.findViewById(R.id.tv_p1);
             rl_click = (RelativeLayout) itemView.findViewById(R.id.rl_click);
-            itemView.setOnClickListener(this);
-        }
+//            itemView.setOnClickListener(this);
 
-        @Override
-        public void onClick(View view) {
-            if (getAdapterPosition() < lastItem) {
-                value = "" + (counter + getAdapterPosition() + startNumber);
-
-                if (mClickListener != null) {
-                    mClickListener.onItemClick(view, getAdapterPosition(), value);
+            rl_click.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mClickListener != null) {
+                        int position = (int) v.getTag();
+                        mClickListener.onItemClick(v, position, value);
+                    }
                 }
-            }
+            });
+
         }
+
     }
 
     // allows clicks events to be caught
