@@ -37,8 +37,6 @@ NumberPick.pickNumber(activity,
                 });
  ```
 
-```
-If you want to change color of picker, simply change color code of colorPrimary in color.xml file
 
 ```
 <color name="colorPrimary">#3F51B5</color>
