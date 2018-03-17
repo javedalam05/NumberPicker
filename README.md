@@ -5,7 +5,7 @@ Create a simple Number Picker according to your theme using this Custom NumberPi
 ![alt text](https://github.com/javedalam05/NumberPicker/blob/master/device-2018-01-24-215646.png)
 ![alt text](https://github.com/javedalam05/NumberPicker/blob/master/device-2018-01-24-215747.png)
 ![alt text](https://github.com/javedalam05/NumberPicker/blob/master/device-2018-01-24-215646.png)
-```
+
 
 ##	How to use NumberPicker:
 ```
