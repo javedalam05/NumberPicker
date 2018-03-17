@@ -7,9 +7,10 @@ Create a simple Number Picker according to your theme using this Custom NumberPi
 ![alt text](https://github.com/javedalam05/NumberPicker/blob/master/device-2018-01-24-215646.png)
 
 
-##	How to use NumberPicker:
-```
+###	How to use NumberPicker:
+
 Simply Call following method according to your requirement
+
 
 ```
 NumberPick.pickNumber(activity,
@@ -37,6 +38,7 @@ NumberPick.pickNumber(activity,
                 });
  ```
 
+If you want to change color theme of picker, simply change color code of colorPrimary in color.xml resource file, as mention below:
 
 ```
 <color name="colorPrimary">#3F51B5</color>
