@@ -15,8 +15,8 @@ Simply Call following method according to your requirement
 NumberPick.pickNumber(activity,
                 dialogTitle,     //dialog title
                 selectedNumber,  //value selection
-                0,               // starting number
-                50,              // total number of items (here-0+80 means 0 to 79)  (eg: 2+80 means 2 to 81)
+                2,               // starting number
+                80,              // total number of items (here-0+80 means 0 to 79)  (eg: 2+80 means 2 to 81)
                 20,               //number of items per page
                 4,                // number of columns in a row
                 new GetCounter() {
